@@ -1,0 +1,24 @@
+<div style="text-align: center;"><h1>{{title}}</h1></div>
+
+<div style="text-align: center;">
+ 
+<table style="  margin-left: auto;
+margin-right: auto;
+" border="1"> 
+  <tr>
+    <th>Time Data</th>
+    <th>Open</th>
+    <th>High</th>
+    <th>Low</th>
+    <th>Close</th>
+    <th>Volume</th>
+
+  
+  </tr>
+  <tr *ngFor="let time of Tdata| keyvalue">
+    <td>{{time.key}}</td>
+    <td *ngFor="let dataTwo of time.value | keyvalue">{{dataTwo.value}}</td>
+   </tr>
+</table>
+</div>
+<router-outlet></router-outlet>
